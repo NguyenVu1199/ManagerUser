@@ -215,7 +215,8 @@ const goBack=()=>{
       <Layout>
         <Layout.Section>
           <DisplayText className="create_user" value={valueName} size="medium">
-            Create Users
+            {!id &&<span> Create Users</span>}
+            {id && <p style={{fontSize:"20px"}}> Edit User: {getUser.fullname}</p>}
           </DisplayText>
           <br></br>
           <Card sectioned>
