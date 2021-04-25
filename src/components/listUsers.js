@@ -94,12 +94,14 @@ const ListUser = (props) => {
           }
         }
       } else {
+        setCheckedAll(false);
         for (let x in data) {
           callApi(`listUsers/${data[x].id}`, "DELETE").then((err) => {
             console.log(err);
           });
-            fetchAllData();
+          fetchAllData();
         }
+
       }
       alert("Delete multiple Successfully!");
     }
