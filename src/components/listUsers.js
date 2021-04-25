@@ -98,6 +98,7 @@ const ListUser = (props) => {
           callApi(`listUsers/${data[x].id}`, "DELETE").then((err) => {
             console.log(err);
           });
+            fetchAllData();
         }
       }
       alert("Delete multiple Successfully!");
